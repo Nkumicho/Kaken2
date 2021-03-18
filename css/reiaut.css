@@ -39,9 +39,24 @@ header {
    }
    #container{
      display: grid;
-     grid-template-rows:70vh 50vh 30vh 30vh;
+     grid-template-rows:70vh 50vh 50vh 50vh;
      grid-template-columns: 50% 50%;
    }
+
+@media screen and (max-width:1300px) {
+     #container{
+       display: grid;
+       grid-template-rows:50vh 40vh 30vh 30vh;
+       grid-template-columns: 50% 50%;
+     }
+   }
+   @media screen and (max-height:400px) {
+       #container{
+         display: grid;
+         grid-template-rows:70vh 50vh 50vh 50vh;
+         grid-template-columns: 50% 50%;
+       }
+     }
   img{
     position: absolute;
     top: 50%;
@@ -139,6 +154,7 @@ header {
     grid-row: 3;
     grid-column: 1;
     background-color: #f2f2f2;
+
   }
   #itemD > p{
     position: absolute;
@@ -173,6 +189,7 @@ header {
     grid-row: 4;
     grid-column: 1;
     background-color: #f2f2f2;
+        overflow: hidden;
   }
   #itemF > p{
     position: absolute;
@@ -266,9 +283,12 @@ header {
   }
   #itemB > img{
     position: absolute;
-    width: 90%;
     top: 50%;
     transform: translateY(-50%);
+    max-height: 95%;
+    max-height: 95%;
+    width: auto;
+    height: auto;
   }
   #itemC{
     display: flex;
@@ -309,10 +329,10 @@ header {
   background-color: #f2f2f2;
     }
 #itemE>img{
-      max-height: 95%;
-      max-width: 100%;
-      height: auto;
-      width: auto;
+  max-height: 95%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
   }
 #itemF{
   display: flex;
